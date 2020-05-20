@@ -1,20 +1,24 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Codexplain</title>
+    <title>Explainer</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/explanations.css">
 </head>
 <body>
+<body>
 <div class="page-container flex-column">
-    {{>header }}
+    {{>header}}
     <div class="main flex-column flex-item">
         <p class="flex-item">Faster learning for any framework, library, or language</p>
         <div class="flex-row flex-item">
             <div class="flex-item example bg-light">
                 <p>Why use this</p>
                 <div class="bg-dark">
-                    <code>{{exampleCode}}</code>
+                    <code>
+                        <label>
+                            <textarea placeholder="Paste code here..."></textarea>
+                        </label>
+                    </code>
                 </div>
             </div>
             <div class="flex-item example bg-light">
@@ -28,9 +32,7 @@
     <div class="flex-item"></div>
     {{>footer}}
 </div>
-<script>
-    const code = document.getElementById('example')
-    code.innerHTML = `{{{fmtExampleCode}}}`
-</script>
+</body>
 </body>
 </html>
+

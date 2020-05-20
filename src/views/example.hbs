@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <title>Example</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/explanations.css">
+</head>
+<body>
+<div class="page-container flex-column">
+    {{>header}}
+    <div class="codexplain"></div>
+    {{>footer}}
+</div>
+<script src="../client-side.js"></script>
+<script>
+    const explanation = document.querySelector('.codexplain');
+    fetchExplanation("const helloWorld = 'HelloWorld'", "typescript")
+            .then((e) => explanation.innerHTML = e.code);
+</script>
+</body>
+</html>
